@@ -1,0 +1,41 @@
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.hover-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+}
+
+.btn {
+  border-radius: 25px;
+  padding: 8px 20px;
+}
+
+.display-4 {
+  font-weight: 600;
+  background: linear-gradient(120deg, #2563eb, #4f46e5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: #6b7280;
+}

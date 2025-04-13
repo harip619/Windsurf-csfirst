@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./resume-backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./resume-backend/app:/app/app
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=app/main.py
+    command: python app/main.py
+    restart: always
+
+  frontend:
+    build: ./resume-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./resume-frontend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - backend
